@@ -5,10 +5,14 @@ import Card from "./Card";
 const ServiceCards = () => {
     const Servicecards = useLoaderData();
     return (
-        <div className="grid md:grid-cols-3 gap-4 py-6">
-            {
+        <div>
+            <h1 className="text-center py-5 md:text-4xl font-bold"><span className="text-green-500">Our</span> Services</h1>
+           
+           <div  className="grid md:grid-cols-3 gap-4 py-6">
+           {
                 Servicecards.map(card => <Card key={card.id} card={card}></Card>)
             }
+           </div>
             
         </div>
     );

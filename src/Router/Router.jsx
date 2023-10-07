@@ -6,6 +6,8 @@ import Courses from "../Pages/Courses";
 import Blog from "../Pages/Blog";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import CardDetails from "../Components/CardDetails";
+
 
 const router = createBrowserRouter([
     {
@@ -18,6 +20,12 @@ const router = createBrowserRouter([
                 loader:()=> fetch('/educare.json'),
                 element:<Home></Home>
             },
+            {
+                path:'/serviceDetails/:Id',
+                loader:()=> fetch('/educare.json'),
+                element:<CardDetails></CardDetails>,
+      
+              },
             {
                 path:'/courses',
                 element:<Courses></Courses>,
