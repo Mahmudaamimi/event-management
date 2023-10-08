@@ -7,6 +7,7 @@ import Blog from "../Pages/Blog";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import CardDetails from "../Components/CardDetails";
+import Privetroute from "./Privetroute";
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
             {
                 path:'/serviceDetails/:Id',
                 loader:()=> fetch('/educare.json'),
-                element:<CardDetails></CardDetails>,
+                element:<Privetroute><CardDetails></CardDetails></Privetroute>,
       
               },
             {

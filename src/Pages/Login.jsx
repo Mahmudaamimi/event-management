@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { BsGithub } from 'react-icons/bs';
 import { useContext, useState } from "react";
@@ -7,35 +7,45 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-  const {loginUser} = useContext(AuthContext);
-  const [loginerror,setLoginerror] = useState("");
-  const [loginsuccess,setLoginsuccess] = useState('')
-  const handlelogin = (e)=>{
+  const { loginUser, githubLogin } = useContext(AuthContext);
+  const [loginerror, setLoginerror] = useState("");
+  const [loginsuccess, setLoginsuccess] = useState('');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handlelogin = (e) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget)
-    const email = (form.get('email'))
-    const password = (form.get('password'))
-    console.log(password,email)
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email');
+    const password = form.get('password');
+    console.log(password, email);
 
-    loginUser(email,password)
-    .then((result) => {
-      console.log(result.user);
-      if (setLoginsuccess){
-        toast('Login Successful');
-        
-      }
-     
-    })
-    .catch((error) => {
-      console.error(error)
-      if (setLoginerror) {
-        toast('Incorrect password');
-        
-      }
+    loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        if (setLoginsuccess) {
+          toast('Login Successful');
+        }
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch((error) => {
+        console.error(error);
+        if (setLoginerror) {
+          toast('Incorrect password');
+        }
+      });
+  };
 
-    });
+  const handleloginwithgithub = () => {
+    githubLogin()
+      .then(result => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
-  }
   return (
     <div>
       <Navbar></Navbar>
@@ -63,8 +73,8 @@ const Login = () => {
                 <button className="btn  bg-green-500 text-white">Log in</button>
                 <i className="text-center">or</i>
               </div>
-              <button className="btn">
-              <BsGithub className="text-xl"></BsGithub>
+              <button onClick={handleloginwithgithub} className="btn">
+                <BsGithub className="text-xl"></BsGithub>
                 Login With Github
               </button>
               <p>Don't have an account? <Link className="font-semibold underline text-green-500" to='/register'>Register</Link></p>
