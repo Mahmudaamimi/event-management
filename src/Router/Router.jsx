@@ -29,11 +29,11 @@ const router = createBrowserRouter([
               },
             {
                 path:'/courses',
-                element:<Courses></Courses>,
+                element:<Privetroute><Courses></Courses></Privetroute>,
             },
             {
                 path:'/blog',
-                element:<Blog></Blog>,
+                element:<Privetroute><Blog></Blog></Privetroute>,
             },
             {
                 path:'/login',

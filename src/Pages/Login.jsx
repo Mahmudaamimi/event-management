@@ -3,8 +3,8 @@ import Navbar from "../Components/Navbar";
 import { BsGithub } from 'react-icons/bs';
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/Authprovider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+
 
 const Login = () => {
   const { loginUser, githubLogin } = useContext(AuthContext);
@@ -25,8 +25,8 @@ const Login = () => {
         console.log(result.user);
         if (setLoginsuccess) {
           toast('Login Successful');
+          navigate(location?.state ? location.state : '/');
         }
-        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => {
         console.error(error);
@@ -78,11 +78,12 @@ const Login = () => {
                 Login With Github
               </button>
               <p>Don't have an account? <Link className="font-semibold underline text-green-500" to='/register'>Register</Link></p>
-              <ToastContainer></ToastContainer>
+           
             </form>
           </div>
         </div>
       </div>
+
     </div>
   );
 };
