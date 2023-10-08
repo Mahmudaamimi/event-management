@@ -22,6 +22,7 @@ const Authprovider = ({children}) => {
         return signOut(auth)
     }
     const githubLogin = ()=>{
+        setLoading(true)
         return signInWithPopup(auth,githubprovider);
     }
     useEffect(()=>{
