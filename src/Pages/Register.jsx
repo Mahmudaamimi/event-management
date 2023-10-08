@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/Authprovider";
@@ -11,6 +11,7 @@ const Register = () => {
     const {createUser} = useContext(AuthContext)
     const [registererror,setRegistererror] = useState('')
     const [registersuccess,setRegistersuccess] = useState('')
+    const navigatee = useNavigate()
     const handleregister = (e)=>{
         e.preventDefault();
         const form = new FormData(e.currentTarget)
@@ -46,6 +47,7 @@ const Register = () => {
             console.log(result.user)
             if (setRegistersuccess) {
                 toast("User registation successful")
+                navigatee( '/');       
                 
             }
               //email verification
