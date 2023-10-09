@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/Authprovider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
 // import { sendEmailVerification } from "firebase/auth";
 
 
@@ -16,6 +17,7 @@ const Register = () => {
         e.preventDefault();
         const form = new FormData(e.currentTarget)
         const text = (form.get('text'))
+        const photo = (form.get('photo'))
         const password = (form.get('password'))
         const email = (form.get('email'))
         const checkbox = e.target.checkbox.checked;
@@ -50,6 +52,12 @@ const Register = () => {
                 navigatee( '/');       
                 
             }
+            updateProfile(result.user,{
+                displayName: text,
+                photoURL: photo,
+              })
+              .then(()=> console.log('profile upload'))
+              .catch()
               //email verification
             //   sendEmailVerification(result.user)
             //   .then(() => {
@@ -77,6 +85,12 @@ const Register = () => {
                                     <span className="label-text">Your Name</span>
                                 </label>
                                 <input type="text" name="text" placeholder="Name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Your Profile Url</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="Name" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
