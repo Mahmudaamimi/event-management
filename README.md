@@ -3,8 +3,6 @@
 [Project Link - educare-bbf11.web.app/login](https://educare-bbf11.web.app/login)
 
 
-
-
 # Project Features
 
 ## 1. Responsive Design
