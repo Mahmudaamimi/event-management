@@ -70,13 +70,9 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn  bg-green-500 text-white">Log in</button>
+                <button className="btn  bg-blue-500 text-white">Log in</button>
                 <i className="text-center">or</i>
               </div>
-              <button onClick={handleloginwithgithub} className="btn">
-                <BsGithub className="text-xl"></BsGithub>
-                Login With Github
-              </button>
               <p>Don't have an account? <Link className="font-semibold underline text-green-500" to='/register'>Register</Link></p>
            
             </form>

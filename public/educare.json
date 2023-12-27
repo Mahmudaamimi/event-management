@@ -2,42 +2,42 @@
   {
     "id": 1,
     "title": "Foundations of Event Management: A Comprehensive Guide",
-    "image": "https://i.ibb.co/Kj5427x/edu-1.jpg",
+    "image": "https://i.ibb.co/DwsPBfh/8.jpg",
     "price": "$69.99",
     "description": "Delve into the foundational principles and practices of event management, covering event planning, logistics, budgeting, and client management. Learn how to create memorable and successful events that leave a lasting impression."
   },
   {
     "id": 2,
     "title": "Innovations in Event Management: Shaping the Future of Events",
-    "image": "https://i.ibb.co/vxKL4cP/edu-2.jpg",
+    "image": "https://i.ibb.co/xztHHDS/2.jpg",
     "price": "$79.99",
     "description": "Explore the latest technological advancements and innovative strategies transforming the event management landscape. Discover how to integrate virtual reality, AI, and gamification to enhance event experiences and engagement."
   },
   {
     "id": 3,
-    "title": "Inclusive Educare: Nurturing Diversity in Learning",
-    "image": "https://i.ibb.co/vmL6DHX/edu-3.jpg",
+    "title": "Inclusive Education: Nurturing Diversity in Learning",
+    "image": "https://i.ibb.co/BfNwjCw/3.jpg",
     "price": "$89.99",
     "description": "Learn to create an inclusive and equitable educational environment that embraces diversity and promotes equal opportunities for all learners. This course focuses on understanding diverse learning needs, cultural sensitivities, and special educational requirements. Gain essential knowledge and practical skills to adapt teaching methods, classroom materials, and assessments to accommodate a wide range of abilities and backgrounds. Empower yourself to champion inclusivity in education, ensuring that every student feels valued and supported on their educational journey."
   },
   {
     "id": 4,
     "title": " Inclusive Event Management: Embracing Diversity in Events",
-    "image": "https://i.ibb.co/935YdSG/edu-4.jpg",
+    "image": "https://i.ibb.co/Q8gKk7D/4.jpg",
     "price": "$74.99",
     "description": "Learn to create inclusive and diverse events that cater to a wide range of attendees. Gain insights on adapting event plans, designs, and experiences to accommodate various cultural backgrounds and preferences. and create a positive and productive work environment. Equip yourself with the tools to lead transformative change and make a lasting impact on the educational landscape, ensuring the success and growth of your educational institution."
   },
   {
     "id": 5,
     "title": "Logistics Management",
-    "image": "https://i.ibb.co/02H0Y39/edu-5.jpg",
+    "image": "https://i.ibb.co/Jpwb407/6.jpg",
     "price": "$99.99",
     "description": "Navigate the digital age of education with this comprehensive course that explores the integration of technology and digital resources into modern Educare practices. Gain insights into leveraging educational software, online platforms, and digital tools to enhance teaching, learning, and student engagement. Learn strategies for promoting digital literacy and responsible digital citizenship among students. Stay ahead in the rapidly evolving landscape of education by mastering the effective use of digital resources, fostering a tech-savvy educational community, and preparing students for success in the digital world."
   },
   {
     "id": 6,
     "title": "Client Management:",
-    "image": "https://i.ibb.co/FsSRM0G/edu-6.jpg",
+    "image": "https://i.ibb.co/fr6PPgK/7.jpg",
     "price": "$59.99",
     "description": "Understanding and effectively managing client expectations is vital for a successful event management career. Learn to communicate effectively with clients, understand their vision, and align it with the event's goals. Discover how to build strong client relationships through transparency, collaboration, and exceeding their expectations in event execution."
   }

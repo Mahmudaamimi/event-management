@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD4LNK2pmU0KC8PsFA6N1-tJf0TXOPBss0",
-  authDomain: "educare-bbf11.firebaseapp.com",
-  projectId: "educare-bbf11",
-  storageBucket: "educare-bbf11.appspot.com",
-  messagingSenderId: "141607139024",
-  appId: "1:141607139024:web:1fae59451a5165f0dc90d5"
+  apiKey: "AIzaSyAlRdltEMq7edRmi9m3H7d9yENZiZBkDjk",
+  authDomain: "event-management-e8023.firebaseapp.com",
+  projectId: "event-management-e8023",
+  storageBucket: "event-management-e8023.appspot.com",
+  messagingSenderId: "244894590207",
+  appId: "1:244894590207:web:9e91e651c30f2d353fd8ca"
 };
 
 // Initialize Firebase

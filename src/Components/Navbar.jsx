@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import logo from "../assets/logo.png.png"
+import   { useContext } from 'react';
+ 
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Provider/Authprovider';
 
@@ -14,6 +14,7 @@ const Navbar = () => {
     <li className='font-semibold'><NavLink to='/'>Home</NavLink></li>
     <li className='font-semibold'><NavLink to='/courses'>Couress</NavLink></li>
     <li className='font-semibold'><NavLink to='/blog'>Blog</NavLink></li>
+    <li className='font-semibold'><NavLink to='/register'>Registration</NavLink></li>
   </>
   return (
     <div className="navbar bg-base-100">
@@ -26,7 +27,7 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <img className='w-20 md:w-60 ' src={logo} alt="" />
+         <h2 className='md:text-3xl'>Education</h2>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -39,12 +40,12 @@ const Navbar = () => {
           <div className='flex items-center gap-2'>
             <img className='rounded-full w-8' src={user.photoURL} alt="" />
             <span>{user.displayName}</span>
-            <button onClick={handleLogOut} className=" md:px-10 md:py-4 text-sm md:text-lg rounded-md bg-green-500 text-white ">Log Out</button>
+            <button onClick={handleLogOut} className=" md:px-10 md:py-4 text-sm md:text-lg rounded-md bg-blue-500 text-white ">Log Out</button>
           </div>
 
             :
             <Link to='/login'>
-              <button className="md:px-10 md:py-4 rounded-md text-sm md:text-lg bg-green-500 text-white">Login</button>
+              <button className="md:px-10 md:py-4 rounded-md text-sm md:text-lg bg-blue-500 text-white">Login</button>
             </Link>
 
         }

@@ -1,11 +1,11 @@
-import footerlogo from '../assets/logo.png.png'
+
 
 const Footer = () => {
     return (
         <footer className=" p-10 bg-base-200 text-base-content">
             <div className='footer'>
                 <aside>
-                    <img src={footerlogo} alt="" />
+                     <h1>Education </h1>
                     <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
                 </aside>
                 <nav>

@@ -15,7 +15,7 @@ const Card = ({ card }) => {
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{truncatedDescription}</p>
-        <button className="btn bg-green-500 text-white">
+        <button className="btn bg-blue-500 text-white">
           Read more...
         </button>
       </div>
